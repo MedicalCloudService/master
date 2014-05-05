@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">醫療檢測</string>
+    <string name="content_descript" />
+    <string name="person_info">基本資料</string>
+    <string name="name">姓名</string>
+    <string name="sex">性別</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="birthday">出生日期</string>
+    <string name="ad">西元</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+
+</resources>

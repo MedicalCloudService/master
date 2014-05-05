@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Medical Examination</string>
+    <string name="content_descript" />
+    <string name="person_info">Person Information</string>
+    <string name="name">Name</string>
+    <string name="sex">Sex</string>
+    <string name="man">Man</string>
+    <string name="woman">Woman</string>
+    <string name="birthday">Date of birth</string>
+    <string name="ad">AD</string>
+    <string name="year">Year</string>
+    <string name="month">Month</string>
+    <string name="day">Day</string>
+
+</resources>
