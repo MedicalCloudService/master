@@ -123,6 +123,7 @@
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/textViewAD"
         android:ems="10"
+        android:gravity="center"
         android:inputType="number"
         android:maxLength="4" >
 
@@ -140,14 +141,154 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/Black_Gray" />
 
-    <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextView1"
-        android:layout_width="40dp"
+    <EditText
+        android:id="@+id/editTextMonth"
+        android:layout_width="50dp"
         android:layout_height="40dp"
-        android:layout_alignTop="@+id/editTextYear"
-        android:layout_marginLeft="18dp"
+        android:layout_alignBaseline="@+id/textViewAD"
+        android:layout_alignTop="@+id/textViewBirthday"
+        android:layout_marginLeft="20dp"
         android:layout_toRightOf="@+id/textViewYear"
         android:ems="10"
-        android:text="AutoCompleteTextView" />
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="2" />
+
+    <TextView
+        android:id="@+id/textViewMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/textViewYear"
+        android:layout_toRightOf="@+id/editTextMonth"
+        android:gravity="center_vertical"
+        android:text="@string/month"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Black_Gray" />
+
+    <EditText
+        android:id="@+id/editTextDay"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textViewAD"
+        android:layout_alignBottom="@+id/editTextYear"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/textViewMonth"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="2" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/textViewAD"
+        android:layout_toRightOf="@+id/editTextDay"
+        android:gravity="center_vertical"
+        android:text="@string/day"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Black_Gray" />
+
+    <TextView
+        android:id="@+id/textViewEducationAge"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/textViewBirthday"
+        android:layout_below="@+id/textViewBirthday"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:text="@string/education_age"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Black" />
+
+    <EditText
+        android:id="@+id/editTextEducationAge"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textViewEducationAge"
+        android:layout_alignLeft="@+id/editTextYear"
+        android:layout_alignTop="@+id/textViewEducationAge"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="2" />
+
+    <TextView
+        android:id="@+id/textViewEducationAgeYear"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/editTextEducationAge"
+        android:layout_toRightOf="@+id/editTextEducationAge"
+        android:gravity="center_vertical"
+        android:text="@string/year"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Black_Gray" />
+
+    <TextView
+        android:id="@+id/textViewliteracy"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/textViewEducationAge"
+        android:layout_below="@+id/textViewEducationAge"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:text="@string/literacy"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Black" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupLiteracy"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/textViewliteracy"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/textViewliteracy"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioLiteracyYes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:text="@string/yes"
+            android:textColor="@color/Black" />
+
+        <RadioButton
+            android:id="@+id/radioLiteracyNo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="@string/no"
+            android:textColor="@color/Black" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewDateOfCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/textViewliteracy"
+        android:layout_below="@+id/textViewliteracy"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:text="@string/date_of_checking"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Black" />
+
+    <EditText
+        android:id="@+id/editTextDateOfCheck"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textViewDateOfCheck"
+        android:layout_alignBottom="@+id/textViewDateOfCheck"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/textViewDateOfCheck"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:inputType="date"
+        android:text="dd/mm/yyyy"
+        android:textColor="@color/Black_Gray" />
 
 </RelativeLayout>

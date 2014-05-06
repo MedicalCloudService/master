@@ -13,5 +13,10 @@
     <string name="year">Year</string>
     <string name="month">Month</string>
     <string name="day">Day</string>
+    <string name="education_age">Education Age</string>
+    <string name="literacy">Literacy</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="date_of_checking">Date of Checking</string>
 
 </resources>

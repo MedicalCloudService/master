@@ -141,7 +141,6 @@ public class MainActivity extends Activity
 		/** init focuse */
 		view1.findViewById(R.id.editTextName).requestFocus();
 
-		
 	}
 
 	private void handleButtonClick(View view)

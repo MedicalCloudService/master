@@ -13,5 +13,10 @@
     <string name="year">年</string>
     <string name="month">月</string>
     <string name="day">日</string>
+    <string name="education_age">教育年齡</string>
+    <string name="literacy">識字能力</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="date_of_checking">檢查日期</string>
 
 </resources>
