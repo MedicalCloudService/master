@@ -51,7 +51,10 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        android:maxLength="20" />
+        android:maxLength="20" >
+
+        <requestFocus />
+    </EditText>
 
     <TextView
         android:id="@+id/textViewSex"
@@ -126,8 +129,6 @@
         android:gravity="center"
         android:inputType="number"
         android:maxLength="4" >
-
-        <requestFocus />
     </EditText>
 
     <TextView
@@ -179,7 +180,7 @@
         android:maxLength="2" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewDay"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_alignBottom="@+id/textViewAD"
@@ -260,7 +261,6 @@
             android:layout_marginLeft="20dp"
             android:text="@string/no"
             android:textColor="@color/Black" />
-
     </RadioGroup>
 
     <TextView
@@ -275,20 +275,89 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/Black" />
 
-    <EditText
-        android:id="@+id/editTextDateOfCheck"
-        android:layout_width="160dp"
-        android:layout_height="40dp"
+    <TextView
+        android:id="@+id/textViewDateOfCheckAD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textViewDateOfCheck"
         android:layout_alignBottom="@+id/textViewDateOfCheck"
         android:layout_marginLeft="20dp"
         android:layout_toRightOf="@+id/textViewDateOfCheck"
+        android:text="@string/ad"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Black_Gray" />
+
+    <EditText
+        android:id="@+id/editTextDateOfCheckYear"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textViewDateOfCheckAD"
+        android:layout_alignBottom="@+id/textViewDateOfCheckAD"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewDateOfCheckAD"
         android:ems="10"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
         android:gravity="center"
-        android:inputType="date"
-        android:text="dd/mm/yyyy"
+        android:inputType="number"
+        android:maxLength="4" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/textViewDateOfCheckYear"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/editTextDateOfCheckYear"
+        android:layout_alignBottom="@+id/editTextDateOfCheckYear"
+        android:layout_toRightOf="@+id/editTextDateOfCheckYear"
+        android:text="@string/year"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Black_Gray" />
+
+    <EditText
+        android:id="@+id/editTextDateOfCheckMonth"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textViewDateOfCheckAD"
+        android:layout_alignTop="@+id/textViewDateOfCheck"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/textViewDateOfCheckYear"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="2" />
+
+    <TextView
+        android:id="@+id/textViewDateOfCheckMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/textViewDateOfCheckYear"
+        android:layout_toRightOf="@+id/editTextDateOfCheckMonth"
+        android:gravity="center_vertical"
+        android:text="@string/month"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Black_Gray" />
+
+    <EditText
+        android:id="@+id/editTextDateOfCheckDay"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textViewDateOfCheckAD"
+        android:layout_alignBottom="@+id/editTextDateOfCheckYear"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/textViewDateOfCheckMonth"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="2" />
+
+    <TextView
+        android:id="@+id/textViewDateOfCheckDay"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/textViewDateOfCheckAD"
+        android:layout_toRightOf="@+id/editTextDateOfCheckDay"
+        android:gravity="center_vertical"
+        android:text="@string/day"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/Black_Gray" />
 
 </RelativeLayout>
