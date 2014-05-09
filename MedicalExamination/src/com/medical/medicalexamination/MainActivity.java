@@ -27,6 +27,7 @@ public class MainActivity extends Activity
 	private View			view1, view2, view3;
 	private List<View>		viewList;
 	private ViewPager		viewPager		= null;
+	private MenuHandler		menuHandler		= null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -45,6 +46,8 @@ public class MainActivity extends Activity
 		/** init viewpager */
 		initViewPager();
 
+		/** init menu */
+		menuHandler = new MenuHandler(this);
 	}
 
 	private void initDrawerLayout()
