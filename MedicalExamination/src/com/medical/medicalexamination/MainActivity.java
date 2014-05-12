@@ -3,9 +3,13 @@ package com.medical.medicalexamination;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.medical.medicalexamination.common.EventMessage;
+
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -22,12 +26,13 @@ import android.widget.Spinner;
 
 public class MainActivity extends Activity
 {
-	private DrawerLayout	drawerLayout	= null;
-	private ImageView		listMenuBtn		= null;
-	private View			view1, view2, view3;
-	private List<View>		viewList;
-	private ViewPager		viewPager		= null;
-	private MenuHandler		menuHandler		= null;
+	private DrawerLayout		drawerLayout		= null;
+	private ImageView			listMenuBtn			= null;
+	private View				view1, view2, view3;
+	private List<View>			viewList;
+	private ViewPager			viewPager			= null;
+	private MenuHandler			menuHandler			= null;
+	private FlipperMenuHandler	flipperMenuHandler	= null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -47,7 +52,11 @@ public class MainActivity extends Activity
 		initViewPager();
 
 		/** init menu */
-		menuHandler = new MenuHandler(this);
+		menuHandler = new MenuHandler(this, selfHandler);
+
+		/** init flipper menu */
+		flipperMenuHandler = new FlipperMenuHandler(this);
+		flipperMenuHandler.setNotifyHandler(selfHandler);
 	}
 
 	private void initDrawerLayout()
@@ -168,6 +177,27 @@ public class MainActivity extends Activity
 											{
 												handleButtonClick(view);
 											}
+										};
+
+	private Handler			selfHandler	= new Handler()
+										{
+
+											@Override
+											public void handleMessage(Message msg)
+											{
+												switch (msg.what)
+												{
+												case EventMessage.MSG_LOGIN:
+													break;
+												case EventMessage.MSG_SHOW_LOGIN:
+													flipperMenuHandler.showLogin();
+													break;
+												case EventMessage.MSG_SHOW_HISTORY:
+													flipperMenuHandler.showHistory();
+													break;
+												}
+											}
+
 										};
 
 }

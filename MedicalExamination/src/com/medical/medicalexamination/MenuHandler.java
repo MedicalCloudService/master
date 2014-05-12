@@ -1,9 +1,12 @@
 package com.medical.medicalexamination;
 
+import com.medical.medicalexamination.common.EventHandler;
+import com.medical.medicalexamination.common.EventMessage;
 import com.medical.medicalexamination.common.Logs;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,15 +19,18 @@ import android.widget.TextView;
 
 public class MenuHandler
 {
-	private final int		ITEM_LOGIN	= 0;
+	private final int		ITEM_LOGIN		= 0;
+	private final int		ITEM_HISTORY	= 1;
 
-	private ListView		listView	= null;
-	private LayoutInflater	inflater	= null;
+	private ListView		listView		= null;
+	private LayoutInflater	inflater		= null;
+	private Activity		theActivity		= null;
 
-	public MenuHandler(Activity activity)
+	public MenuHandler(Activity activity, final Handler handler)
 	{
 		super();
 
+		theActivity = activity;
 		listView = (ListView) activity.findViewById(R.id.menu_list);
 		inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		MenuAdapter adapter = new MenuAdapter();
@@ -41,7 +47,10 @@ public class MenuHandler
 				switch (position)
 				{
 				case ITEM_LOGIN:
-
+					EventHandler.notify(handler, EventMessage.MSG_SHOW_LOGIN, 0, 0, null);
+					break;
+				case ITEM_HISTORY:
+					EventHandler.notify(handler, EventMessage.MSG_SHOW_HISTORY, 0, 0, null);
 					break;
 				}
 			}
@@ -59,7 +68,7 @@ public class MenuHandler
 		@Override
 		public int getCount()
 		{
-			return 1;
+			return 2;
 		}
 
 		@Override
@@ -85,9 +94,12 @@ public class MenuHandler
 			switch (position)
 			{
 			case ITEM_LOGIN:
-				itemText.setText("Login");
+				itemText.setText(theActivity.getString(R.string.login));
+				itemImage.setImageResource(R.drawable.signin_normal);
 				break;
-			case 1:
+			case ITEM_HISTORY:
+				itemText.setText(theActivity.getString(R.string.history));
+				itemImage.setImageResource(R.drawable.subscribe_normal);
 				break;
 			}
 

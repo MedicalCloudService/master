@@ -18,5 +18,12 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="date_of_checking">Date of Checking</string>
+    <string name="login">Login</string>
+    <string name="hint_login_name">Login Name</string>
+    <string name="hint_login_password">Password</string>
+    <string name="login_error">Login Error</string>
+    <string name="history">History</string>
+    <string name="basic_test">Basic Test</string>
+    <string name="attentiveness">Attentiveness</string>
 
 </resources>

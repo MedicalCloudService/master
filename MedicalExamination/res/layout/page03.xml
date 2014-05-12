@@ -3,5 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
     
+<TextView
+        android:id="@+id/textViewAttentiveness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingTop="20dp"
+        android:text="@string/attentiveness"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Focus_Blue" />
 
+    <View
+        android:id="@+id/separate_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/textViewAttentiveness"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/separate_line" />
+    
 </RelativeLayout>

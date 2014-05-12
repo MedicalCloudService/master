@@ -17,7 +17,7 @@
         android:paddingTop="20dp"
         android:text="@string/person_info"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/Black_Gray" />
+        android:textColor="@color/Focus_Blue" />
 
     <View
         android:id="@+id/separate_line"
@@ -50,6 +50,7 @@
         android:layout_toRightOf="@+id/textViewName"
         android:ems="10"
         android:gravity="center"
+        android:imeOptions="actionNext"
         android:inputType="textPersonName"
         android:maxLength="20" >
 
@@ -127,8 +128,10 @@
         android:layout_toRightOf="@+id/textViewAD"
         android:ems="10"
         android:gravity="center"
+        android:imeOptions="actionNext"
         android:inputType="number"
         android:maxLength="4" >
+
     </EditText>
 
     <TextView
@@ -152,6 +155,7 @@
         android:layout_toRightOf="@+id/textViewYear"
         android:ems="10"
         android:gravity="center"
+        android:imeOptions="actionNext"
         android:inputType="number"
         android:maxLength="2" />
 
@@ -176,6 +180,7 @@
         android:layout_toRightOf="@+id/textViewMonth"
         android:ems="10"
         android:gravity="center"
+        android:imeOptions="actionNext"
         android:inputType="number"
         android:maxLength="2" />
 
@@ -211,6 +216,7 @@
         android:layout_alignTop="@+id/textViewEducationAge"
         android:ems="10"
         android:gravity="center"
+        android:imeOptions="actionNext"
         android:inputType="number"
         android:maxLength="2" />
 
@@ -297,8 +303,10 @@
         android:layout_toRightOf="@+id/textViewDateOfCheckAD"
         android:ems="10"
         android:gravity="center"
+        android:imeOptions="actionNext"
         android:inputType="number"
         android:maxLength="4" >
+
     </EditText>
 
     <TextView
@@ -322,6 +330,7 @@
         android:layout_toRightOf="@+id/textViewDateOfCheckYear"
         android:ems="10"
         android:gravity="center"
+        android:imeOptions="actionNext"
         android:inputType="number"
         android:maxLength="2" />
 
@@ -346,6 +355,7 @@
         android:layout_toRightOf="@+id/textViewDateOfCheckMonth"
         android:ems="10"
         android:gravity="center"
+        android:imeOptions="actionDone"
         android:inputType="number"
         android:maxLength="2" />
 
