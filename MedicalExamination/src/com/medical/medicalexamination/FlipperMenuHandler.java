@@ -23,6 +23,7 @@ public class FlipperMenuHandler
 	private MenuID			menuId				= null;
 	private RelativeLayout	loginMainLayout		= null;
 	private RelativeLayout	historyMainLayout	= null;
+	private RelativeLayout	calendarLayout		= null;
 	private Handler			notifyHandler		= null;
 
 	public class LoginData
@@ -35,7 +36,7 @@ public class FlipperMenuHandler
 	{
 		public int	mnLoginId			= Type.INVALID;
 		public int	mnHistoryId			= Type.INVALID;
-		public int	mnSettingId			= Type.INVALID;
+		public int	mnCalendarId		= Type.INVALID;
 		public int	mnSubscribeId		= Type.INVALID;
 		public int	mnAccountAdd		= Type.INVALID;
 		public int	mnForgetPassword	= Type.INVALID;
@@ -60,6 +61,7 @@ public class FlipperMenuHandler
 
 		menuId.mnLoginId = flipperView.addChild(R.layout.login);
 		menuId.mnHistoryId = flipperView.addChild(R.layout.history);
+		menuId.mnCalendarId = flipperView.addChild(R.layout.calendar);
 
 		loginMainLayout = (RelativeLayout) flipperView.findViewById(R.id.login_main_layout);
 		loginMainLayout.setOnTouchListener(mainLayoutTouch);
@@ -68,6 +70,9 @@ public class FlipperMenuHandler
 		historyMainLayout = (RelativeLayout) flipperView.findViewById(R.id.history_main_layout);
 		historyMainLayout.setOnTouchListener(mainLayoutTouch);
 		historyHandler(activity);
+
+		calendarLayout = (RelativeLayout) flipperView.findViewById(R.id.calendar_main_layout);
+		calendarLayout.setOnTouchListener(mainLayoutTouch);
 
 	}
 
@@ -85,6 +90,11 @@ public class FlipperMenuHandler
 	public void showHistory()
 	{
 		flipperView.showView(menuId.mnHistoryId);
+	}
+
+	public void showCalendar()
+	{
+		flipperView.showView(menuId.mnCalendarId);
 	}
 
 	private void loginHandle(final Activity activity)

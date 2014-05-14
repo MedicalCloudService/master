@@ -193,7 +193,7 @@ public class MainActivity extends Activity
 													flipperMenuHandler.showLogin();
 													break;
 												case EventMessage.MSG_SHOW_HISTORY:
-													flipperMenuHandler.showHistory();
+													flipperMenuHandler.showCalendar();
 													break;
 												}
 											}
